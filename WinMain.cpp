@@ -11,8 +11,6 @@
 #define WM_KEYDOWN                      0x0100
 #define WM_PAINT                        0x000F
 
- float X = 60;
- float Y = 0;
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow)
 {
@@ -73,8 +71,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     v3[5] = Vector3(100, 0, 100);
     v3[6] = Vector3(100, 100, 100);
     v3[7] = Vector3(0, 100, 100);
-    m1.v3 = v3; // 将三维点和变换矩阵进行绑定
-    m1.v3number = 8;
+
     //其次创建正方体需要的六个面，用来记录面的顺序
     int fnumber = 6;
     Face* f = new Face[fnumber];
@@ -90,8 +87,6 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     C1.readVector3(v3);
     //下面就该进行变换了 
     //m1.RotateX(30);//绕X轴旋转30°，正交投影
-    m1.RotateX(X);//
-    m1.RotateY(Y);
 
    
    
@@ -112,21 +107,6 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
         hp = CreatePen(1, 3, RGB(0, 0, 0));//create pen
         SelectObject(hcdc, hp);// select pen into DC
 
-        Vector3 temp;
-        //采用正交投影，即只使用三维坐标的X 和 Y;
-        //for (int nface     = 0; nface < fnumber; nface++) {// 表面循环
-        //    for (int npoint = 0; npoint < 4; npoint++) {// 顶点循环
-        //       //f[nface].i8ndex[npoint] 第nface面的第npoint个点
-        //        if (npoint == 0) {
-        //            l1.MoveTo(hdc, m1.v3[f[nface].index[npoint]].x, m1.v3[f[nface].index[npoint]].y);
-        //            temp = v3[f[nface].index[npoint]];
-        //        }
-        //        else {
-        //            l1.LineTo(hdc, m1.v3[f[nface].index[npoint]].x, m1.v3[f[nface].index[npoint]].y);
-        //        }
-        //    }
-        //    l1.LineTo(hdc, temp.x, temp.y);// 闭合四边形
-        //}
         ReleaseDC(hwnd, hdc);//释放窗口句柄
         DeleteObject(hp);//
 
@@ -136,20 +116,12 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     case WM_KEYDOWN:
     {
         if (wParam == VK_UP) {
-            X++;
-            m1.RotateX(X);
         }
         if (wParam == VK_DOWN) {
-            X--;
-            m1.RotateX(X);
         }
         if (wParam == VK_RIGHT) {
-            Y++;
-            m1.RotateX(Y);
         }
         if (wParam == VK_LEFT) {
-            Y--;
-            m1.RotateX(Y);
         }
         //PostQuitMessage(0);//可以直接退出，说明点击是有效的
         InvalidateRect(hwnd, NULL, true);  

@@ -36,6 +36,12 @@
     <ClCompile Include="Line.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="MatrixV2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixV3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vector2.h">
@@ -56,16 +62,10 @@
     <ClInclude Include="Cube.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Model_Matrix.h">
+    <ClInclude Include="MatrixV2.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Camera_Matrix.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Projection_Matrix.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Screen_Matrix.h">
+    <ClInclude Include="MatrixV3.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
