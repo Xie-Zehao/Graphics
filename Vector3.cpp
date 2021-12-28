@@ -1,7 +1,7 @@
 #include"Vector3.h"
 
 Vector3::Vector3() {}
-Vector3::Vector3(float x, float y, float z) :x(x), y(y), z(z) {}
+Vector3::Vector3(double x, double y, double z) :x(x), y(y), z(z) {}
 Vector3::Vector3(const Vector3& v1) : x(v1.x), y(v1.y), z(v1.z) {}
 Vector3::~Vector3() {}
 Vector3 Vector3::operator=(const Vector3& v1)
@@ -15,8 +15,8 @@ Vector3 Vector3::operator=(const Vector3& v1)
 	// TODO: 在此处插入 return 语句
 }
 void Vector3::Normalize() {
-	float result;
-	result = (float)sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2));
+	double result;
+	result = (double)sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2));
 	this->x = this->x / result;
 	this->y = this->y / result;
 	this->z = this->z / result;
@@ -31,14 +31,14 @@ Vector3 Vector3::Cross(Vector3& lhs, Vector3& rhs) {
 	return temp;
 }
 //点乘
-float Vector3::Dot(Vector3& lhs, Vector3& rhs) {
-	float result;
+double Vector3::Dot(Vector3& lhs, Vector3& rhs) {
+	double result;
 	result = lhs.x * rhs.x + lhs.y * rhs.y + lhs.z * rhs.z;
 	return result;
 }
 
 //线性插值
-Vector3 Lerp(Vector3& from, Vector3& to, float t) {
+Vector3 Lerp(Vector3& from, Vector3& to, double t) {
 	Vector3 temp;
 	temp.x = from.x + t * (to.x - from.x);
 	temp.y = from.y + t * (to.y - from.y);
@@ -64,13 +64,13 @@ Vector3& operator-(Vector3& v1, Vector3& v2) {
 }
 
 //重载点乘（向量 * 向量）
-float operator*(Vector3& v1, Vector3& v2) {
-	float result;
+double operator*(Vector3& v1, Vector3& v2) {
+	double result;
 	result = v1.x * v2.x + v1.y * v2.y + v1.z * v2.z;
 	return result;
 }
 //重载数乘（数 * 向量）
-Vector3 operator*(float a, Vector3& b) {
+Vector3 operator*(double a, Vector3& b) {
 	Vector3 temp;
 	temp.x = a * b.x;
 	temp.y = a * b.y;
@@ -78,7 +78,7 @@ Vector3 operator*(float a, Vector3& b) {
 	return temp;
 }
 //重载数乘（向量 * 数）
-Vector3 operator*(Vector3& b, float a) {
+Vector3 operator*(Vector3& b, double a) {
 	Vector3 temp;
 	temp.x = a * b.x;
 	temp.y = a * b.y;
@@ -86,7 +86,7 @@ Vector3 operator*(Vector3& b, float a) {
 	return temp;
 }
 //重载除法（向量 / 数）
-Vector3 operator/(Vector3& b, float a) {
+Vector3 operator/(Vector3& b, double a) {
 	Vector3 temp;
 	temp.x = b.x / a;
 	temp.y = b.y / a;

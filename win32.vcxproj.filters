@@ -27,19 +27,28 @@
     <ClCompile Include="Vector3.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Face.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Cube.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Line.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="MatrixV2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="MatrixV3.cpp">
+    <ClCompile Include="MatrixV3_Model.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Cube.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Face.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixV3_View.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixV3_Projection.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixV3_ViewPort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -59,8 +68,25 @@
     <ClInclude Include="MatrixV2.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="MatrixV3.h">
+    <ClInclude Include="MatrixV3_Model.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Cube.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Face.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixV3_Projection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixV3_ViewPort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MatrixV3_View.h">
+      <Filter>头文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

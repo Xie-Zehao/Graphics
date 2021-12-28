@@ -1,3 +1,6 @@
-﻿  WinMain.cpp
-D:\VS2019Project\win32\WinMain.cpp(55,15): warning C4244: “return”: 从“WPARAM”转换到“int”，可能丢失数据
+﻿  Cube.cpp
+  Vector3.cpp
+  正在生成代码...
+D:\VS2019Project\win32\Vector3.cpp(63): warning C4172: 返回局部变量或临时变量的地址: temp
+  LINK : 没有找到 D:\VS2019Project\win32\x64\Debug\win32.exe 或上一个增量链接没有生成它；正在执行完全链接
   win32.vcxproj -> D:\VS2019Project\win32\x64\Debug\win32.exe
