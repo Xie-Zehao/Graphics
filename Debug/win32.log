@@ -1,0 +1,6 @@
+﻿  WinMain.cpp
+D:\VS2019Project\win32\WinMain.cpp(180,45): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(180,32): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(182,47): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(182,34): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+  win32.vcxproj -> D:\VS2019Project\win32\Debug\win32.exe
