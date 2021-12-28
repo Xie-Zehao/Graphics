@@ -15,5 +15,7 @@ public:
 	double T[4][4];//给一个4x4的矩阵，用多少拿多少就行，给够
 
 	/*开始MVP，需要创建View矩阵*/
-	Matrix CreateViewMatrix(double posX,double posY,double posZ, double targetX, double targetY, double targetZ, double upX,double upY,double upZ);//创建View矩阵
+	Matrix& CreateViewMatrix(double posX,double posY,double posZ, double targetX, double targetY, double targetZ, double upX,double upY,double upZ);//创建View矩阵
+	Matrix& CreateOrthoProjectionMatrix(double t,double b,double n,double f,double r,double l);//这个矩阵获得的是正交投影矩阵
+	Matrix& CreatePerspOrthoProjectionMatrix(double t, double b, double n, double f, double r, double l);//这个矩阵获得的是投影矩阵
 };

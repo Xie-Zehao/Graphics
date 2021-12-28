@@ -50,16 +50,10 @@
     <ClInclude Include="Vector3.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Face.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Matrix.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Line.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Cube.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="MatrixV2.h">

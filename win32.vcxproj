@@ -150,8 +150,6 @@
     <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Cube.h" />
-    <ClInclude Include="Face.h" />
     <ClInclude Include="Line.h" />
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="MatrixV2.h" />
