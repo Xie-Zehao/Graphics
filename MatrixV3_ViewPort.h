@@ -5,5 +5,5 @@
 using namespace std;
 class MatrixV3_ViewPort :public Matrix {
 public:
-	MatrixV3_ViewPort(double width, double height);
+	MatrixV3_ViewPort(float width, float height);
 };

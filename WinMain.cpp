@@ -37,7 +37,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine
         L"MiniXie_Student's Graphics",    // Window text
         WS_OVERLAPPEDWINDOW,            // Window style
         // Size and position
-        CW_USEDEFAULT, CW_USEDEFAULT, 920, 920,
+        CW_USEDEFAULT, CW_USEDEFAULT, 700,700,
         NULL,       // Parent window    
         NULL,       // Menu
         hInstance,  // Instance handle
@@ -73,18 +73,26 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     MatrixV3_View V = MatrixV3_View(1, 1, 2, 1, 1, 1, 0, 1, 0);//创建V矩阵，相机坐标（1，1，1），看向（2，2，2）
     MatrixV3_Projection P = MatrixV3_Projection(45, 1, 0.1, 50);//创建P矩阵
     MatrixV3_ViewPort ViewPort = MatrixV3_ViewPort(1920,1080);//创建视口矩阵
-    Matrix VP_P_V_M = ViewPort * (P * V);//获得最终变换矩阵M 
+    Matrix V_M = V * M;//获得最终变换矩阵M 
+    Matrix P_V_M = P * V_M;//获得最终变换矩阵M 
+    Matrix V_P_V_M = ViewPort * P_V_M;
+    
 
     //创建一个三角形的三个点
     Vector3 v[3];
     v[0] = Vector3(2, 0, -2);
-    v[1] = Vector3(0, 2, -2);
+    v[1] = Vector3(0, 2, -2);       
     v[2] = Vector3(-2, 0, -2);
-    Triangle tri(v);
+
+    //三角形和矩阵进行绑定
     M.v3 = v;
     M.v3number = 3;
-    MultiplyMatrix(VP_P_V_M.T, M.v3, M.v3number);
+    //将三个顶点坐标和三角形进行绑定
+    Triangle tri(M.v3);
 
+    MultiplyMatrix(V_P_V_M.T, M.v3, M.v3number);
+    //将已经变换过顶点坐标放入三角形
+    tri.setRP(M.v3);
 
     switch (uMsg)
     {
@@ -98,16 +106,13 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
         hcdc = CreateCompatibleDC(hdc);//create Source DC in Memory
         BM = CreateCompatibleBitmap(hcdc, 0, 0);//create bitmap through Source DC
         SelectObject(hcdc, BM);// select bitmap into DC
-        BitBlt(hdc, 0, 0, 920, 1080, hcdc, 0, 0, SRCCOPY);//Copy hcdc to hdc
+        BitBlt(hdc, 0, 0, 700, 700, hcdc, 0, 0, SRCCOPY);//Copy hcdc to hdc
         //now,we have created a var HDC and a var HCDC ,we just need to draw it in HCDC 
         hp = CreatePen(1, 3, RGB(0, 0, 0));//create pen
         SelectObject(hcdc, hp);// select pen into DC
 
-
-
         ReleaseDC(hwnd, hdc);//释放窗口句柄
-        DeleteObject(hp);//
-
+        DeleteObject(hp);
         FillRect(hdc, &ps.rcPaint, (HBRUSH)(COLOR_WINDOW + 1));
         EndPaint(hwnd, &ps);
     }break;

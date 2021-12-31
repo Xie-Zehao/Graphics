@@ -9,7 +9,7 @@ public:
 
 	void setMatrix(Vector2* a, int b);//二位顶点矩阵初始化
 	void MultiplyMatrix();//矩阵相乘
-	void Scale(double x, double y);//缩放
-	void Rotation(double beta);//旋转
-	void Translation(double x, double y);//平移
+	void Scale(float x, float y);//缩放
+	void Rotation(float beta);//旋转
+	void Translation(float x, float y);//平移
 };

@@ -3,7 +3,7 @@
 #include<math.h>
 
 
-void MatrixV3_Model::Scale(double x, double y, double z)
+void MatrixV3_Model::Scale(float x, float y, float z)
 {
 	Identity();
 	T[0][0] = x;
@@ -12,7 +12,7 @@ void MatrixV3_Model::Scale(double x, double y, double z)
 	MultiplyMatrix(T, v3, v3number);
 }
 
-void MatrixV3_Model::Rotation_About_X(double alpha)
+void MatrixV3_Model::Rotation_About_X(float alpha)
 {
 	Identity();
 	T[1][1] = cos(alpha * 180 / M_PI); T[1][2] = -sin(alpha * 180 / M_PI);
@@ -20,7 +20,7 @@ void MatrixV3_Model::Rotation_About_X(double alpha)
 	MultiplyMatrix(T, v3, v3number);
 }
 
-void MatrixV3_Model::Rotation_About_Y(double beta)
+void MatrixV3_Model::Rotation_About_Y(float beta)
 {
 	Identity();
 	T[0][0] = cos(beta * 180 / M_PI); T[0][2] = sin(beta * 180 / M_PI);
@@ -28,7 +28,7 @@ void MatrixV3_Model::Rotation_About_Y(double beta)
 	MultiplyMatrix(T, v3, v3number);
 }
 
-void MatrixV3_Model::Rotation_About_Z(double gamma)
+void MatrixV3_Model::Rotation_About_Z(float gamma)
 {
 	Identity();
 	T[0][0] = cos(gamma * 180 / M_PI); T[0][1] = -sin(gamma * 180 / M_PI);
@@ -36,7 +36,7 @@ void MatrixV3_Model::Rotation_About_Z(double gamma)
 	MultiplyMatrix(T, v3, v3number);
 }
 
-void MatrixV3_Model::Rotation(double alpha, double beta, double gamma)
+void MatrixV3_Model::Rotation(float alpha, float beta, float gamma)
 {
 	Rotation_About_X(alpha);
 	Rotation_About_Y(beta);
@@ -45,7 +45,7 @@ void MatrixV3_Model::Rotation(double alpha, double beta, double gamma)
 
 
 
-void MatrixV3_Model::Translation(double x, double y,double z)
+void MatrixV3_Model::Translation(float x, float y,float z)
 {
 	Identity();
 	T[0][3] = x;

@@ -1,6 +1,6 @@
 #include "MatrixV3_View.h"
 
-MatrixV3_View::MatrixV3_View(double posX, double posY, double posZ, double targetX, double targetY, double targetZ, double upX, double upY, double upZ)
+MatrixV3_View::MatrixV3_View(float posX, float posY, float posZ, float targetX, float targetY, float targetZ, float upX, float upY, float upZ)
 {
 	Identity();
 	//1，根据两个点坐标，创建摄像头的位置坐标，也是指向的起点坐标
@@ -18,12 +18,12 @@ MatrixV3_View::MatrixV3_View(double posX, double posY, double posZ, double targe
 	//7，摄像机看的是-Z轴
 	Z = -Z;
 	//8，已知相机坐标，可知Tview矩阵
-	double Tview[4][4];
+	float Tview[4][4];
 	Tview[0][3] = -posX;
 	Tview[1][3] = -posY;
 	Tview[2][3] = -posZ;
 	//9，已知相机坐标系，R的逆 = R的转置，可知Rview矩阵
-	double Rview[4][4];
+	float Rview[4][4];
 	Rview[0][0] = X.x; Rview[0][1] = X.y; Rview[0][2] = X.z;
 	Rview[1][0] = Y.x; Rview[1][1] = Y.y; Rview[1][2] = Y.z;
 	Rview[2][0] = Z.x; Rview[2][1] = Z.y; Rview[2][2] = Z.z;

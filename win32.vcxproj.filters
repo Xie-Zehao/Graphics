@@ -27,7 +27,7 @@
     <ClCompile Include="Vector3.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Line.cpp">
+    <ClCompile Include="Tool.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="MatrixV2.cpp">
@@ -39,7 +39,7 @@
     <ClCompile Include="Cube.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Tool.cpp">
+    <ClCompile Include="Face.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="MatrixV3_View.cpp">

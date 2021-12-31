@@ -13,10 +13,10 @@ public:
 	l=-1,r=1,b=-1,t=1,n=0.1,f=100
 	45, 1, 0.1, 50
 	*/
-	MatrixV3_Projection(double t, double b, double n, double f, double r, double l);
+	MatrixV3_Projection(float t, float b, float n, float f, float r, float l);
 
-	MatrixV3_Projection(double FOV,double aspect,double n,double f);
+	MatrixV3_Projection(float FOV,float aspect,float n,float f);
 
 
-	void MulOrthoProjectionMatrix(double t, double b, double n, double f, double r, double l);//这个矩阵获得的是正交投影矩阵
+	void MulOrthoProjectionMatrix(float t, float b, float n, float f, float r, float l);//这个矩阵获得的是正交投影矩阵
 };

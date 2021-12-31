@@ -15,7 +15,7 @@ void MatrixV2::MultiplyMatrix() {//二维点的变换
 	}
 }
 
-void MatrixV2::Scale(double x, double y)
+void MatrixV2::Scale(float x, float y)
 {
 	Identity();
 	T[0][0] = x;
@@ -23,14 +23,14 @@ void MatrixV2::Scale(double x, double y)
 	MultiplyMatrix();
 }
 
-void MatrixV2::Rotation(double beta)
+void MatrixV2::Rotation(float beta)
 {
 	Identity();
 	T[0][0] = cos(beta * 180 / M_PI); T[0][1] = -sin(beta * 180 / M_PI);
 	T[1][0] = sin(beta * 180 / M_PI); T[1][1] = cos(beta * 180 / M_PI);
 	MultiplyMatrix();
 }
-void MatrixV2::Translation(double x, double y){
+void MatrixV2::Translation(float x, float y){
 	Identity();
 	T[0][2] = x;
 	T[1][2] = y;

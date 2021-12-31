@@ -141,8 +141,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Cube.cpp" />
+    <ClCompile Include="Face.cpp" />
     <ClCompile Include="Tool.cpp" />
-    <ClCompile Include="Line.cpp" />
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="MatrixV2.cpp" />
     <ClCompile Include="MatrixV3_Model.cpp" />

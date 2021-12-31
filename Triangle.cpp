@@ -18,10 +18,17 @@ Triangle::~Triangle()
 {
 }
 
-int inside(Triangle tri, double x, double y)
+void Triangle::setRP(Vector3 *Point)
+{
+	this->RP[0] = Point[0];
+	this->RP[1] = Point[1];
+	this->RP[2] = Point[2];
+}
+
+int inside(Triangle tri, float x, float y)
 {
 	Vector2 v2_S[3];
-	double result = 1;
+	float result = 1;
 	v2_S[0] = Vector2(tri.P[0].x, tri.P[0].y);
 	v2_S[1] = Vector2(tri.P[1].x, tri.P[1].y);
 	v2_S[2] = Vector2(tri.P[2].x, tri.P[2].y);
