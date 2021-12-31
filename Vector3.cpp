@@ -30,6 +30,17 @@ Vector3 Vector3::Cross(Vector3& lhs, Vector3& rhs) {
 	temp.z = lhs.x * rhs.y - rhs.x * lhs.y;
 	return temp;
 }
+//²æ³Ë
+Vector3 Vector3::Cross(Vector3& rhs) {
+	Vector3 temp;
+	temp.x = this->y * rhs.z - rhs.y * this->z;
+	temp.y = this->z * rhs.x - rhs.z * this->y;
+	temp.z = this->x * rhs.y - rhs.x * this->y;
+	this->x = temp.x;
+	this->y = temp.y;
+	this->z = temp.z;
+	return *this;
+}
 //µã³Ë
 double Vector3::Dot(Vector3& lhs, Vector3& rhs) {
 	double result;

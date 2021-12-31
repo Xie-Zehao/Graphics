@@ -23,6 +23,7 @@ public:
 	double Dot(Vector3& lhs, Vector3& rhs);
 	//向量叉乘
 	Vector3 Cross(Vector3& lhs, Vector3& rhs);
+	Vector3 Cross(Vector3& rhs);
 	/*
 	* 重载运算符
 	*/

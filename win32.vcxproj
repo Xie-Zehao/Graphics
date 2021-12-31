@@ -120,6 +120,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <StackReserveSize>52428800</StackReserveSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -140,7 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Cube.cpp" />
-    <ClCompile Include="Face.cpp" />
+    <ClCompile Include="Tool.cpp" />
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="MatrixV2.cpp" />
@@ -148,6 +149,7 @@
     <ClCompile Include="MatrixV3_Projection.cpp" />
     <ClCompile Include="MatrixV3_View.cpp" />
     <ClCompile Include="MatrixV3_ViewPort.cpp" />
+    <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="WinMain.cpp" />
     <ClCompile Include="Vector2.cpp" />
     <ClCompile Include="Vector3.cpp" />
@@ -155,12 +157,13 @@
   <ItemGroup>
     <ClInclude Include="Cube.h" />
     <ClInclude Include="Face.h" />
-    <ClInclude Include="Line.h" />
+    <ClInclude Include="Tool.h" />
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="MatrixV3_Projection.h" />
     <ClInclude Include="MatrixV2.h" />
     <ClInclude Include="MatrixV3_Model.h" />
     <ClInclude Include="MatrixV3_ViewPort.h" />
+    <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vector2.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>

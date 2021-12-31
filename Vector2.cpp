@@ -18,6 +18,10 @@ double Vector2::getY(){
 void Vector2::ToString() {
 	cout << "( " << x << ", " << y << ", " << w << ") " << endl;
 }
+double Vector2::Cross(Vector2 v2)
+{
+	return x * v2.y - y * v2.x;
+}
 Vector2 operator+(Vector2& v1, Vector2& v2) {
 	Vector2 temp;
 	temp.x = v1.x + v2.x;

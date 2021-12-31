@@ -10,6 +10,7 @@ public:
 	Vector2(const Vector2& v1);
 	~Vector2();//析构函数
 	void ToString();
+	double Cross(Vector2 v2);//二维点叉乘
 	double getX();
 	double getY();
 	friend Vector2 operator+(Vector2& v1, Vector2& v2);//重载加法运算符
