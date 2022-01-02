@@ -31,7 +31,7 @@ public:
 	friend Vector3 Lerp(Vector3& from, Vector3& to, float t);//重载线性插值
 	friend float operator*(Vector3& v1, Vector3& v2);//重载向量乘法
 	friend Vector3 operator+(Vector3& v1, Vector3& v2);//重载向量加法
-	friend Vector3& operator-(Vector3& v1, Vector3& v2);//重载向量减法
+	friend Vector3 operator-(Vector3& v1, Vector3& v2);//重载向量减法
 	friend Vector3 operator*(float a, Vector3& b);//重载向量数乘
 	friend Vector3 operator*(Vector3& b, float a);//重载向量数乘
 	friend Vector3 operator/(Vector3& b, float a);//重载向量除法
@@ -47,7 +47,7 @@ Vector3 Lerp(Vector3& from, Vector3& to, float t);
 //重载相加
 Vector3 operator+(Vector3& v1, Vector3& v2);
 //重载相减
-Vector3& operator-(Vector3& v1, Vector3& v2);
+Vector3 operator-(Vector3& v1, Vector3& v2);
 //重载取反
 Vector3 operator-(Vector3& v1);
 //重载点乘（向量 * 向量）

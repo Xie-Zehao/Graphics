@@ -15,7 +15,7 @@ Vector3 Vector3::operator=(const Vector3& v1)
 }
 void Vector3::Normalize() {
 	float result;
-	result = (float)sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2));
+	result = (float)sqrt(this->x * this->x + this->y * this->y + this->z * this->z);
 	this->x = this->x / result;
 	this->y = this->y / result;
 	this->z = this->z / result;
@@ -64,7 +64,7 @@ Vector3 operator+(Vector3& v1, Vector3& v2) {
 	return temp;
 }
 //÷ÿ‘ÿœ‡ºı
-Vector3& operator-(Vector3& v1, Vector3& v2) {
+Vector3 operator-(Vector3& v1, Vector3& v2) {
 	Vector3 temp;
 	temp.x = v1.x - v2.x;
 	temp.y = v1.y - v2.y;

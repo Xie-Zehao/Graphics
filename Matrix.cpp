@@ -20,13 +20,16 @@ using namespace std;
 			cout << endl;
 		}
 	}
-	void MultiplyMatrix(float T[4][4], Vector3* v3, int v3number) {//需要传入变换矩阵和原来的点坐标
+	//会传出去地址，但是函数调用结束会释放地址，所以要重新赋值
+	Vector3* MultiplyMatrix(float T[4][4], Vector3* v3, int v3number) {//需要传入变换矩阵和原来的点坐标
+		Vector3 result[3];
 		for (int i = 0; i < v3number; i++) {
-			v3[i].x = T[0][0] * v3[i].x + T[0][1] * v3[i].y + T[0][2] * v3[i].z + T[0][3] * v3[i].w;
-			v3[i].y = T[1][0] * v3[i].x + T[1][1] * v3[i].y + T[1][2] * v3[i].z + T[1][3] * v3[i].w;
-			v3[i].z = T[2][0] * v3[i].x + T[2][1] * v3[i].y + T[2][2] * v3[i].z + T[2][3] * v3[i].w;
-			v3[i].w = T[3][0] * v3[i].x + T[3][1] * v3[i].y + T[3][2] * v3[i].z + T[3][3] * v3[i].w;
+			 result[i].x = T[0][0] * v3[i].x + T[0][1] * v3[i].y + T[0][2] * v3[i].z + T[0][3] * v3[i].w;
+			 result[i].y = T[1][0] * v3[i].x + T[1][1] * v3[i].y + T[1][2] * v3[i].z + T[1][3] * v3[i].w;
+			 result[i].z = T[2][0] * v3[i].x + T[2][1] * v3[i].y + T[2][2] * v3[i].z + T[2][3] * v3[i].w;
+			 result[i].w = T[3][0] * v3[i].x + T[3][1] * v3[i].y + T[3][2] * v3[i].z + T[3][3] * v3[i].w;
 		}
+		return result;
 	}
 	Matrix& operator*( Matrix &L, Matrix &R)
 	{

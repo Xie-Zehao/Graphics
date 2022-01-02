@@ -5,7 +5,7 @@ using namespace std;
 
 class Matrix {
 public:
-	friend void MultiplyMatrix(float TT[4][4], Vector3* v3, int v3number);
+	friend Vector3* MultiplyMatrix(float TT[4][4], Vector3* v3, int v3number);
 	/*默认函数*/
 	Matrix();
 	~Matrix();//析构函数
@@ -15,5 +15,5 @@ public:
 	float T[4][4];//给一个4x4的矩阵，用多少拿多少就行，给够
 };
 
-void MultiplyMatrix(float TT[4][4], Vector3* v3, int v3number);//需要传入变换矩阵和原来的点坐标
+Vector3* MultiplyMatrix(float TT[4][4], Vector3* v3, int v3number);//需要传入变换矩阵和原来的点坐标
 Matrix& operator*(Matrix &L,Matrix &R);//全局函数矩阵相乘

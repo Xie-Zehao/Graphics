@@ -1,24 +1,12 @@
-﻿  Face.cpp
-  Tool.cpp
-D:\VS2019Project\win32\Tool.cpp(26,19): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-D:\VS2019Project\win32\Tool.cpp(26,15): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-D:\VS2019Project\win32\Tool.cpp(33,9): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\Tool.cpp(34,9): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\Tool.cpp(48,23): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\Tool.cpp(48,18): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\Tool.cpp(74,9): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\Tool.cpp(75,9): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\Tool.cpp(89,23): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\Tool.cpp(89,18): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\Tool.cpp(119,18): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-D:\VS2019Project\win32\Tool.cpp(119,15): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-D:\VS2019Project\win32\Tool.cpp(120,9): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\Tool.cpp(121,9): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\Tool.cpp(135,23): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\Tool.cpp(135,18): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-  Triangle.cpp
-  WinMain.cpp
+﻿  WinMain.cpp
 D:\VS2019Project\win32\WinMain.cpp(61,15): warning C4244: “return”: 从“WPARAM”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\WinMain.cpp(74,63): warning C4305: “参数”: 从“double”到“float”截断
-  正在生成代码...
+D:\VS2019Project\win32\WinMain.cpp(75,64): warning C4305: “参数”: 从“double”到“float”截断
+D:\VS2019Project\win32\WinMain.cpp(119,45): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(119,32): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(120,43): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(120,30): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(121,43): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(121,30): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(122,43): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(122,30): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
   win32.vcxproj -> D:\VS2019Project\win32\x64\Debug\win32.exe
