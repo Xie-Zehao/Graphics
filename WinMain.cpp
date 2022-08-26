@@ -37,7 +37,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine
         L"MiniXie_Student's Graphics",    // Window text
         WS_OVERLAPPEDWINDOW,            // Window style
         // Size and position
-        CW_USEDEFAULT, CW_USEDEFAULT, 1920, 1080,
+        CW_USEDEFAULT, CW_USEDEFAULT, 700  , 700,
         NULL,       // Parent window    
         NULL,       // Menu
         hInstance,  // Instance handle
@@ -69,10 +69,13 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     HBITMAP BM;// create variable Bitmap;
     //这里执行代码
     Line l1;
-    MatrixV3_Model M = MatrixV3_Model();//创建M矩阵
+    float x=0, y=0, z=0;
+    float Dx=0, Dy=0, Dz=0;
+    float alpha=0, beta=0, gamma=0;
+    MatrixV3_Model M = MatrixV3_Model(x,y,z,alpha,beta,gamma,Dx,Dy,Dz);//创建M矩阵
     MatrixV3_View V = MatrixV3_View(0, 0, 0, 0, 0, -1, 0, 1, 0);//创建V矩阵，相机坐标（1，1，1），看向（2，2，2）
     //l = -1, r = 1, b = -1, t = 1, n = 0.1, f = 100
-    MatrixV3_Projection P = MatrixV3_Projection(90, 1, 0.1, 100);//创建P矩阵
+    MatrixV3_Projection P = MatrixV3_Projection(120, 1, 0.1, 100);//创建P矩阵
     MatrixV3_ViewPort ViewPort = MatrixV3_ViewPort(700,700);//创建视口矩阵
     Matrix V_M = V * M;//获得最终变换矩阵M 
     Matrix P_V_M = P * V_M;//获得最终变换矩阵M 
@@ -81,9 +84,9 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
     //创建一个三角形的三个点
     Vector3 v[3];
-    v[0] = Vector3(1, 0, -1);
-    v[1] = Vector3(0, 1, -1);       
-    v[2] = Vector3(-1, 0, -1);  
+    v[0] = Vector3(2, 0, -2);
+    v[1] = Vector3(0, 2, -2);       
+    v[2] = Vector3(-2, 0, -2);  
 
     //三角形和矩阵进行绑定
     M.v3 = v;
@@ -129,12 +132,16 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     case WM_KEYDOWN:
     {
         if (wParam == VK_UP) {
+            y--;
         }
         if (wParam == VK_DOWN) {
+            y++;
         }
         if (wParam == VK_RIGHT) {
+            x = x + 2;
         }
         if (wParam == VK_LEFT) {
+            x=x-2;
         }
         //PostQuitMessage(0);//可以直接退出，说明点击是有效的
         InvalidateRect(hwnd, NULL, true);  

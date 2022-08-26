@@ -1,12 +1,12 @@
 ﻿  WinMain.cpp
 D:\VS2019Project\win32\WinMain.cpp(61,15): warning C4244: “return”: 从“WPARAM”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\WinMain.cpp(75,64): warning C4305: “参数”: 从“double”到“float”截断
-D:\VS2019Project\win32\WinMain.cpp(119,45): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\WinMain.cpp(119,32): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\WinMain.cpp(120,43): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\WinMain.cpp(120,30): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\WinMain.cpp(121,43): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\WinMain.cpp(121,30): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\WinMain.cpp(122,43): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-D:\VS2019Project\win32\WinMain.cpp(122,30): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(78,65): warning C4305: “参数”: 从“double”到“float”截断
+D:\VS2019Project\win32\WinMain.cpp(122,45): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(122,32): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(123,43): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(123,30): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(124,43): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(124,30): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(125,43): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\VS2019Project\win32\WinMain.cpp(125,30): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
   win32.vcxproj -> D:\VS2019Project\win32\x64\Debug\win32.exe

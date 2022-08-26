@@ -2,6 +2,14 @@
 #define _USE_MATH_DEFINES // 这个是PI的定义
 #include<math.h>
 
+MatrixV3_Model::MatrixV3_Model() {
+	Identity();
+}
+
+MatrixV3_Model::MatrixV3_Model(float x, float y, float z, float alpha, float beta, float gamma, float Dx, float Dy, float Dz)
+{
+	Rotation_About_Y(beta);
+}
 
 void MatrixV3_Model::Scale(float x, float y, float z)
 {

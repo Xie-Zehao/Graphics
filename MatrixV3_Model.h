@@ -4,6 +4,8 @@
 
 class MatrixV3_Model :public Matrix {
 public:
+	MatrixV3_Model();
+	MatrixV3_Model(float x, float y, float z, float alpha,float beta,float gamma,float Dx,float Dy,float Dz);
 	Vector3* v3 = NULL;//创建数组
 	int v3number =0 ;//用来记录多少组数据
 	void Scale(float x, float y, float z);//缩放
